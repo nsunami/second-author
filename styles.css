@@ -1,0 +1,208 @@
+:root {
+  --search-box-height: 3rem;
+  --search-box-width: 20rem;
+  --search-button-width: var(--search-box-width) / 4;
+  --navbar-height: 2rem;
+  --secondary-bg-color: #ededed;
+  --main-bg-color: #303238;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation  */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(64, 64, 64);
+  background-color: var(--secondary-bg-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  gap: 3rem;
+  margin-right: 1rem;
+}
+
+.nav-list > li {
+  cursor: pointer;
+}
+
+/* Main */
+
+main {
+  flex-grow: 1;
+  background: var(--secondary-bg-color);
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  background-color: var(--main-bg-color);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  margin: 1rem;
+  z-index: 20;
+}
+
+.copy {
+  font-size: 1.5rem;
+  z-index: 20;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: calc(55px * var(--magnifier)) solid transparent;
+  border-left: calc(60px * var(--magnifier)) solid #696c6e;
+}
+
+.hero-container > .triangle {
+  /* Positioning */
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  /* Triangle */
+  --magnifier: 10;
+  /* Rotate */
+  rotate: 20deg;
+}
+
+/* Table  */
+
+.table-section {
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+}
+
+.table {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-collapse: collapse;
+  padding: 1rem;
+  border-top: 3px solid rgb(140 140 140);
+  border-bottom: 3px solid rgb(140 140 140);
+}
+
+tr > th {
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+tr:nth-of-type(even) {
+  background-color: #ccc;
+}
+
+/* tr:nth-of-type(even) td:nth-of-type(even) {
+  background-color: hsla(0, 0%, 85%);
+} */
+
+th,
+td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--main-bg-color);
+  position: relative;
+  color: #ddd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  overflow: hidden;
+}
+
+.footer > .triangle {
+  position: absolute;
+  top: 0;
+  rotate: -30deg;
+}
+
+.footer-menu {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  gap: 3rem;
+  z-index: 20;
+}
+
+.footer-menu > li {
+  cursor: pointer;
+}
+
+.footer > .triangle-right {
+  /* Positioning */
+  position: absolute;
+  right: 0;
+  top: -3rem;
+  z-index: 10;
+  /* Triangle */
+  --magnifier: 3;
+  /* Rotate */
+  rotate: 20deg;
+}
+
+.footer > .triangle-left {
+  /* Positioning */
+  position: absolute;
+  left: -10rem;
+  bottom: 0;
+  z-index: 10;
+  /* Triangle */
+  --magnifier: 6;
+  /* Rotate */
+  rotate: 30deg;
+}
+
+.copyright-notice {
+  margin-top: 2rem;
+  color: #aaa;
+  z-index: 20;
+}
